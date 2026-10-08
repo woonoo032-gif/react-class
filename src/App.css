@@ -1,38 +1,173 @@
-.App {
+/* 전체 배경 화면 설정 */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+}
+
+/* 중앙 프로필 카드 상자 */
+.profile-card {
+  position: relative;
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 오른쪽 상단 LIVE 태그 */
+.status {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: #dcfce7;
+  color: #166534;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 사진 이미지 전용 스타일 */
+.avatar-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 0 auto 16px auto;
+  display: block;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 소제목 (HELLO REACT) */
+.eyebrow {
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+}
+
+/* 이름 */
+h1 {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+}
+
+/* 학과 정보 */
+.department {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+/* 학번 정보 */
+.student-id {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* 구분선 */
+.divider {
+  width: 36px;
+  height: 3px;
+  background-color: #38bdf8;
+  border-radius: 2px;
+  margin: 0 auto 16px auto;
+}
+
+/* 목표 설명 */
+.goal {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  word-break: keep-all;
+}
+
+/* 기술 스택 태그 목록 */
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* 개별 스킬 태그 */
+.tags span {
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+
+/* QR 코드 영역 */
+.qr-area {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+/* QR 코드 아래 글자 */
+.qr-area p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 하단 버튼 */
+button {
+  width: 100%;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* 버튼 마우스 오버 */
+button:hover {
+  background-color: #1e293b;
+}
+
+/* 모바일 화면 (480px 이하) 대응 반응형 CSS */
+@media (max-width: 480px) {
+  .page {
+    padding: 18px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile-card {
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 29px;
   }
 }
